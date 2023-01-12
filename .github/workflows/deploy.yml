@@ -10,10 +10,9 @@ jobs:
   test:
     env: 
       MONGODB_CLUSTER_ADDRESS: cluster0.fpr8d.mongodb.net
-      MONGODB_USERNAME: mybookingstulumadmindb
-      MONGODB_PASSWORD: D64z9UroPQhLUp00
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
-    # environment: testing
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
